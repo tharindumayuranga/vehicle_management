@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="vehicle_details_list_view">
+      <field name="name">Vehicle Details list</field>
+      <field name="model">vehicle.details</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="reg_number"/>
+          <field name="owner_name"/>
+          <field name="owner_mobile"/>
+          <field name="availability"/>
+        </tree>
+      </field>
+    </record>
+    
+    <!-- explicit form view definition -->
+
+    <record model="ir.ui.view" id="vehicle_details_form_view">
+      <field name="name">Vehicle Details form</field>
+      <field name="model">vehicle.details</field>
+      <field name="arch" type="xml">
+        <form string="Vehicle Details">
+          <sheet>
+            <group>            
+              <group>            
+                <field name="reg_number"/>
+                <field name="owner_name"/>
+                <field name="owner_mobile"/>
+                <field name="owner_nic"/>
+                <field name="nic_image"/>                
+              </group>         
+              <group>  
+                <field name="insurance_number"/>
+                <field name="insurance_image"/>
+                <field name="revenue_license_number"/>
+                <field name="revenue_license_image"/>
+                <field name="insurance_next_expire_date"/>
+                <field name="Revenue_license_next_expire_date"/>
+                <field name="availability"/> 
+              </group>
+            </group>            
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="vehicle_details_action">
+      <field name="name">Vehicle Details</field>
+      <field name="res_model">vehicle.details</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  
+  </data>
+</odoo>

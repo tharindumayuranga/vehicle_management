@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+   <menuitem id="vehicle_management_root_menu" name="Vehicle Management"
+              web_icon="vehicle_management-,static/description/icon.png" sequence="10">
+        <menuitem id="vehicle_management_sub_menu" name="Configurations" sequence="1">
+        
+            <menuitem id="vehicle_details_sub_menu" name="Vehicles" sequence="1"
+                      action="vehicle_details_action"/>
+            <menuitem id="driver_details_sub_menu" name="Drivers" sequence="2"
+                      action="driver_details_action"/>
+        </menuitem>
+    </menuitem>
+  </data>
+</odoo>

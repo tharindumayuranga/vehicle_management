@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="driver_details_list_view">
+      <field name="name">Driver Details list</field>
+      <field name="model">driver.details</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="full_name"/>
+          <field name="address"/>
+          <field name="age"/>
+          <field name="nic"/>
+          <field name="license_expire_date"/>
+        </tree>
+      </field>
+    </record>
+    
+    <!-- explicit form view definition -->
+
+    <record model="ir.ui.view" id="driver_details_form_view">
+      <field name="name">Driver Details form</field>
+      <field name="model">driver.details</field>
+      <field name="arch" type="xml">
+        <form string="Driver Details">
+          <sheet>
+            <group>            
+              <group>            
+                <field name="full_name"/>
+                <field name="address"/>
+                <field name="age"/>
+                <field name="nic"/>
+                <field name="nic_image"/>
+                <field name="license_number"/>
+                <field name="license_expire_date"/>               
+              </group>         
+              <group>  
+                <field name="driving_license_image"/>
+              </group>
+            </group>            
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="driver_details_action">
+      <field name="name">Driver Details</field>
+      <field name="res_model">driver.details</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

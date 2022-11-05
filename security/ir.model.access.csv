@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+vehicle_details_base_user_access,vehicle_details_base_user_access,model_vehicle_details,base.group_user,1,1,1,1
+driver_details_base_user_access,driver_details_base_user_access,model_driver_details,base.group_user,1,1,1,1
